@@ -28,5 +28,7 @@
 * cd ~/yourWorkspaceDirectory/.metadata
 * rm .lock
 * If HBase doesn't work and shows the error: "Can't get master address from ZooKeeper; znode data == null"
-* sudo /sbin/service hbase-master restart # On Master host
-* sudo /sbin/service hbase-regionserver restart # On all RS hosts
+* sudo /sbin/service hadoop-hdfs-namenode restart
+* sudo /sbin/service hadoop-hdfs-datanode restart
+* sudo /sbin/service hbase-regionserver restart
+* sudo /sbin/service hbase-master restart
