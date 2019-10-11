@@ -27,6 +27,11 @@
 * "Eclipse workspace in use" error solve by command: 
 * cd ~/yourWorkspaceDirectory/.metadata
 * rm .lock
+
+### HBase Errors:
+* check the services (which are running or not) by the command:
+* sudo /sbin/service --status-all
+
 * If HBase doesn't work and shows the error: "Can't get master address from ZooKeeper; znode data == null"
 * sudo /sbin/service hadoop-hdfs-namenode restart
 * sudo /sbin/service hadoop-hdfs-datanode restart
