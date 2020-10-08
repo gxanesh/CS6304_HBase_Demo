@@ -54,7 +54,7 @@ scan 'Twitter', {'COLUMNS'=>'Tweets:Type', 'LIMIT'=>3, 'FILTER'=>"ValueFilter(=,
 scan 'Twitter', {'COLUMNS'=>'Info:Retweets', 'LIMIT'=>2}
 //decimal 1738 = hexadecimal 6CA
 //decimal 821 = hexadecimal 335
-scan 'Twitter', {'FILTER'=>"SingleColumnValueFilter('Info','Retweets',=,'binary:\x00\x00\x03\x35')"}
+scan 'Twitter', {'COLUMNS'=>['Info:Retweets', Tweets:Tweet_Text], 'FILTER'=>"SingleColumnValueFilter('Info','Retweets',=,'binary:\x00\x00\x03\x35')"}
 
 
 //Setting the version property to a column family
