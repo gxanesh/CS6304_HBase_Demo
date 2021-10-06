@@ -50,6 +50,9 @@ scan 'Twitter', { 'COLUMNS' => 'Tweets:Tweet_Text', 'FILTER' => "ValueFilter(=, 
 //read data with specific column value
 scan 'Twitter', {'COLUMNS'=>'Tweets:Type', 'LIMIT'=>3, 'FILTER'=>"ValueFilter(=,'binary:link')"}
 
+//read data with a numeric string
+scan 'Twitter', { 'COLUMNS' => 'Tweets:Tweet_Text', 'LIMIT'=>3, 'FILTER' => "ValueFilter(=, 'regexstring:[0-9]')"}
+
 //see all column value while filtering in one value
 scan 'Twitter', {'COLUMNS'=>'Info:Retweets', 'LIMIT'=>2}
 //decimal 1738 = hexadecimal 6CA
