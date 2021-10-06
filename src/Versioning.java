@@ -25,7 +25,7 @@ public static String Table_Name = "Twitter";
 		Put put = new Put(Bytes.toBytes(row_key));
 
 		//insert additional data
-		put.add(Bytes.toBytes("Tweets"), Bytes.toBytes("Type"), Bytes.toBytes("type2"));
+		put.add(Bytes.toBytes("Tweets"), Bytes.toBytes("Type"), Bytes.toBytes("type1"));
 		hTable.put(put);
 
 		//initialize a ge with row key as tweet_url
