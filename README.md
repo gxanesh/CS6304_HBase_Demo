@@ -5,7 +5,7 @@ Open a terminal and start the service
 ```
 $HBASE_HOME/bin/start-hbase.sh
 ```
-In another window if we write 'jps', we will see HMaster running. It should show hadoop namenode, datanode and datamanger are also running.  
+In another window if we write 'jps', we will see HMaster running.  
 Your $HBASE_HOME is /opt/hbase.
 
 
@@ -43,27 +43,21 @@ $HBASE_HOME/bin/stop-hbase.sh
 
 
 ### Common error fix:
-Error 1: mkdir: Call From cs6304-akkcm-02/127.0.1.1 to localhost:9000 failed on connection exception: java.net.ConnectException: Connection refused  
-Explanation and Fix: In general this error comes if you are running hadoop first time on your VM after a reset. The below commands will fix it.
+Error 1: ERROR [main] zookeeper.RecoverableZooKeeper: ZooKeeper exists failed after 4 attempts  
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /hbase/hbaseid
+Explanation and Fix: If you run "jps" in terminal you will not find any "HMaster" service running. To fix this run below command 
 ```
-stop-all.sh
-hadoop namenode -format
-start-all.sh
+$HBASE_HOME/bin/start-hbase.sh
 ```
-You can use the below command to check if namenode, datanode and nodemanager are running.
+You can use the below command to check if HMaster is running.
 ```
 jps
 
 ```
 
-Error 2: mkdir: `hdfs://localhost:9000/user/<username>': No such file or directory  
-Explanation and Fix: The error comes when there is no directory /user and /user/<username> in hdfs and you are trying to create a folder using "hadoop fs -mkdir InputFolder ".   
-Below command will create the directory structure if required and solves the problem.
+Error 2: Exception in thread "main" org.apache.hadoop.hbase.client.RetriesExhaustedException: Cannot get the location for replica0 of region for Twitter,, in hbase:meta
+Explanation and Fix: You will get this error in eclipse if you run HBase on eclipse when HMaster is not running.   
+Go to terminal and run belo command.
 ```
-hdfs dfs -mkdir -p InputFolder
+$HBASE_HOME/bin/start-hbase.sh
 ```
-Error: "shell-init: error retrieving current directory: getcwd"  
-- the directory at which you are when you try to run hadoop command does not exist anymore.  
-
-Warning 1: WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable  
-Fix: You can just ignore this warning.
