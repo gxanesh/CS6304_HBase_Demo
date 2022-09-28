@@ -57,7 +57,7 @@ jps
 
 Error 2: Exception in thread "main" org.apache.hadoop.hbase.client.RetriesExhaustedException: Cannot get the location for replica0 of region for Twitter,, in hbase:meta  
 Explanation and Fix: You will get this error in eclipse if you run HBase on eclipse when HMaster is not running.   
-Go to terminal and run belo command.
+Go to terminal and run command:
 ```
 $HBASE_HOME/bin/start-hbase.sh
 ```
