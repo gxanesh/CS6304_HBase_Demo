@@ -89,8 +89,8 @@ Run Hadoop Commands:
 hadoop fs -rm -r InputFolder					//remove inputfolder if exist
 hadoop fs -mkdir -p InputFolder				       //make the inputfolder
 
-hadoop fs -copyFromLocal '/home/Downloads/Spark_Demo-master/input1.txt' InputFolder  // copy input1.txt to hdfs inputfolder
-hadoop fs -copyFromLocal '/home/Downloads/Spark_Demo-master/input2.txt' InputFolder // copy input2.txt to hdfs inputfolder						  
+hadoop fs -copyFromLocal '/home/gs37r/git/CS6304_HBase_Demo/Twitter.txt' InputFolder  // copy Twitter.txt to hdfs inputfolder
+					  
 hadoop fs -rm -r OutputFolder					//remove outputfolder if exist
 hadoop fs -ls OutputFolder					//see the files in outputfolder
 hadoop fs -cat OutputFolder/part-00000				//see the content of the result
