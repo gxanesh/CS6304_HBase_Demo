@@ -61,3 +61,37 @@ Go to terminal and run command:
 ```
 $HBASE_HOME/bin/start-hbase.sh
 ```
+
+### Hadoop Commands
+Open new tab on the terminal
+
+Check if Hadoop Daemons are Running:
+```
+jps
+```
+If Hadoop Daemons are not running correctly, run the following commands to stop and restart the daemons:
+```
+stop-all.sh
+hadoop namenode -format
+start-all.sh
+```
+Check again:
+```
+jps
+```
+if data node is not running go to the following location in your local and delete the data folder:
+```
+/temp/hadoop-<your-sso>/dfs
+```
+
+Run Hadoop Commands:
+```
+hadoop fs -rm -r InputFolder					//remove inputfolder if exist
+hadoop fs -mkdir -p InputFolder				       //make the inputfolder
+
+hadoop fs -copyFromLocal '/home/Downloads/Spark_Demo-master/input1.txt' InputFolder  // copy input1.txt to hdfs inputfolder
+hadoop fs -copyFromLocal '/home/Downloads/Spark_Demo-master/input2.txt' InputFolder // copy input2.txt to hdfs inputfolder						  
+hadoop fs -rm -r OutputFolder					//remove outputfolder if exist
+hadoop fs -ls OutputFolder					//see the files in outputfolder
+hadoop fs -cat OutputFolder/part-00000				//see the content of the result
+```
