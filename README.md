@@ -17,7 +17,7 @@ Your $HBASE_HOME is /opt/hbase.
 * Choose “Import existing project” and click “Finish”.
 
 
-### Referencing Java Runtime Enviromnent Library(JavaSE-1.8(jre(1)):
+### (If required only) Referencing Java Runtime Enviromnent Library(JavaSE-1.8(jre(1)):
 Right-click on project and select “build path” --> “configure build path” -->”libraries”->”Add Library”
 Select "JRE System Library" --> Click "Next"--> Select "Execution Environment" -->Click on the drop down --> Select JavaSE-1.8(jre(1) --> Click Finish 
 
