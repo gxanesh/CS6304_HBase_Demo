@@ -18,8 +18,8 @@ Your $HBASE_HOME is /opt/hbase.
 
 ### Referencing HBase libraries:
 * Right-click on project and select “build path”-> “configure build path” ->”libraries”->”add external jars”.
-* Go to "other location"(right side, last option)-> computer->opt->hbase->lib and select all jars.
-* REMEMBER: there is a folder named "ruby", do not select it while selecting all the jars
+* Go to " + Other Locations"(Left Pane, Last option)-> computer->opt->hbase->lib and select all jars.
+* REMEMBER: There is a non-jar folder named "ruby", unselect it (Ctrl+click) while selecting all the jars.
 * Add the jars and close
 
 ### How to run
