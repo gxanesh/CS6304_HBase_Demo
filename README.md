@@ -12,8 +12,8 @@ Your $HBASE_HOME is /opt/hbase.
 ### Importing Project:
 * Open “Eclipse”, right-click on “Package Explorer” window, and click import.
 * Select “Git”-> “Projects from Git” and click “next”.
-* Select “clone url” and click “next”.
-* Paste “https://github.com/gxanesh/CS6304_HBase_Demo” in the “url” textbox, and click “next”. 
+* Select “clone URI” and click “next”.
+* Copy and Paste https://github.com/gxanesh/CS6304_HBase_Demo in the “URI” textbox, and click “next”. 
 * Choose “Import existing project” and click “Finish”.
 
 ### Referencing HBase libraries:
