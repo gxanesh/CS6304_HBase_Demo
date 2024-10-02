@@ -16,7 +16,7 @@ describe 'emp'
 //see all table data
 scan 'emp' 
 
-//put the datas
+//put the data
 put 'emp', 'e1', 'personal:name', 'A'
 put 'emp', 'e1', 'personal:age', '50'
 put 'emp', 'e1', 'professional:designation', 'head'
