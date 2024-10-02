@@ -16,8 +16,13 @@ Your $HBASE_HOME is /opt/hbase.
 * Copy and Paste https://github.com/gxanesh/CS6304_HBase_Demo in the “URI” textbox, and click “next”. 
 * Choose “Import existing project” and click “Finish”.
 
+
+### Referencing Java Runtime Enviromnent Library(JavaSE-1.8(jre(1)):
+Right-click on project and select “build path” --> “configure build path” -->”libraries”->”Add Library”
+Select "JRE System Library" --> Click "Next"--> Select "Execution Environment" -->Click on the drop down --> Select JavaSE-1.8(jre(1) --> Click Finish 
+
 ### Referencing HBase libraries:
-* Right-click on project and select “build path”-> “configure build path” ->”libraries”->”add external jars”.
+* Right-click on project and select “build path”-> “configure build path” ->”libraries”->”Add External Jars”.
 * Go to " + Other Locations"(Left Pane, Last option)-> computer->opt->hbase->lib and select all jars.
 * REMEMBER: There is a non-jar folder named "ruby", unselect it (Ctrl+click) while selecting all the jars.
 * Add the jars and close
